@@ -1,0 +1,17 @@
+@import "./variables";
+@import "./mixins";
+@import "./base";
+
+// components
+@import "./components/header.scss";
+@import "./components/section.scss";
+@import "./components/footer.scss";
+@import "./components/slide.scss";
+@import "./components/button.scss";
+@import "./components/policy.scss";
+@import "./components/product.scss";
+@import "./components/filter.scss";
+@import "./components/list_products.scss";
+@import "./components/custom-checkbox";
+@import "./components/detail_product.scss";
+@import "./components//Cart.scss";

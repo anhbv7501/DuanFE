@@ -1,0 +1,213 @@
+.container__header {
+  position: fixed;
+  height: 50px;
+  top: 0;
+  right: 0;
+  left: 0;
+  width: 100%;
+  background-color: white;
+  min-height: $headerHeight;
+  // z-index: 1;
+  // box-shadow: $box-shadow;
+  &.shrink {
+    z-index: 100;
+    box-shadow: $box-shadow;
+    height: $header-shrink-height;
+  }
+}
+.header {
+  min-height: $headerHeight;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  transition: 1s ease;
+  background-color: white;
+  max-width: $wbody;
+
+  @include md-screen {
+    padding: 0 4%;
+    z-index: 100;
+  }
+  @include sm-screen {
+    padding: 0 4%;
+  }
+  @include xs-screen {
+    padding: 0 1.5rem;
+  }
+
+  // background-color: $light;
+  @include d_flex;
+  &__logo,
+  &__navleft,
+  &__navRight {
+    flex: 1;
+    cursor: pointer;
+  }
+  &__iconMenu {
+    display: none;
+    @include sm-screen {
+      display: block;
+      flex: 1;
+      z-index: 10001;
+    }
+    & .icon {
+      @include sm-screen {
+        font-size: 2rem;
+        color: $primary;
+      }
+    }
+  }
+  // &__navLeft .active {
+  //   color: $primary;
+  // }
+  &__navleft {
+    font-size: 2rem;
+    transition: 0.4s linear;
+    display: flex;
+    @include sm-screen {
+      position: absolute;
+      flex-direction: column;
+      top: 0;
+      left: -100%;
+      box-shadow: $navbox-sd;
+      height: 100vh;
+      width: 70%;
+      padding: 7rem;
+      &.active {
+        top: 0;
+        left: 0%;
+        width: 300px;
+        background-color: $light;
+      }
+      &__link {
+        display: block;
+        margin-top: 3rem;
+        font-weight: 600;
+      }
+    }
+
+    &__link:not(:last-child) {
+      padding-right: 2rem;
+
+      @include mb-screen {
+        padding-right: 2rem;
+      }
+    }
+    &__link {
+      z-index: 10000;
+      font-weight: 600;
+      &_active {
+        font-size: 2rem;
+        color: $primary;
+        font-weight: 600;
+        padding-right: 1rem;
+
+        @include lg-screen {
+          padding-right: 3rem;
+        }
+      }
+      color: $dark;
+      &:hover {
+        color: $primary;
+      }
+    }
+  }
+
+  &__logo {
+    text-align: center;
+    &_img {
+      width: 8rem;
+    }
+    @include md-screen {
+      flex: 0;
+    }
+  }
+  &__navRight {
+    font-size: 2rem;
+    color: $dark;
+    text-align: end;
+    z-index: 2000;
+    display: flex;
+    justify-content: flex-end;
+    img {
+      width: 40px;
+      height: 40px;
+      object-fit: cover;
+      border-radius: 50%;
+    }
+    .info-user {
+      position: relative;
+    }
+    .info-user:hover {
+      .sub-avt {
+        display: block;
+      }
+    }
+    .sub-avt {
+      position: absolute;
+      right: 0;
+      display: none;
+      margin: 0;
+      font-size: 1.1rem;
+      top: 100%;
+      list-style: none;
+      box-shadow: 3px 4px 11px #888888;
+      padding: 0.7rem 1.2rem;
+      border-radius: 0.5rem;
+      z-index: 101;
+      width: 148px;
+
+      &::after {
+        content: "";
+        height: 15px;
+        position: absolute;
+        top: -15px;
+        z-index: 100;
+        width: 100%;
+        left: 0;
+      }
+      li {
+        padding: 0.5rem 0;
+        span,
+        a {
+          color: black;
+        }
+        span,
+        a:hover {
+          color: $primary;
+        }
+      }
+    }
+    span:not(:last-child) {
+      padding-right: 3rem;
+      @include sm-screen {
+        padding-right: 2rem;
+      }
+    }
+    & span:hover {
+      color: $primary;
+      cursor: pointer;
+    }
+  }
+}
+
+// .header__navleft.active {
+//   font-size: 30rem;
+// }
+.cart-icon {
+  position: relative;
+  .number {
+    position: absolute;
+    top: 0;
+    right: -50%;
+    background-color: rgb(65, 103, 178);
+    padding: 0 5px;
+    border-radius: 5px;
+    font-size: 1.5rem;
+    color: white;
+
+  }
+}

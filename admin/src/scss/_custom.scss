@@ -1,0 +1,169 @@
+// Here you can add other styles
+.sidebar-nav::-webkit-scrollbar {
+  width: 5px;
+}
+
+.sidebar-nav::-webkit-scrollbar-thumb {
+  background-color: #999c9f;
+}
+
+.flex_option {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  &.gap {
+    gap: 1rem;
+  }
+}
+
+.flex {
+  display: flex;
+  &.flex_end {
+    justify-content: flex-end;
+  }
+}
+
+.icon-hover {
+  cursor: pointer;
+}
+
+.preview {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  &__img {
+    width: 50px;
+    height: 50px;
+    object-fit: contain;
+    &__flex {
+      position: relative;
+      margin-top: 5px;
+      display: flex;
+      gap: 5px;
+      align-items: center;
+    }
+  }
+  &__title {
+    width: calc(100% - 50px);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  &__icon {
+    cursor: pointer;
+    color: red;
+    font-size: 20px;
+  }
+}
+
+.dropzone {
+  width: 100%;
+  padding: 12px;
+  border: 1px dashed gray;
+  cursor: pointer;
+}
+.pagination {
+  display: inline-flex;
+  .page-item {
+    cursor: pointer;
+  }
+}
+
+.page-link {
+  cursor: pointer;
+  color: black;
+  &:hover {
+    color: rgb(119, 158, 224);
+  }
+  &.current {
+    background-color: rgb(59, 70, 89);
+    color: white;
+  }
+}
+
+.pagination {
+  align-items: center;
+}
+
+.flex_type_1 {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.search__box {
+  width: 4rem;
+  height: 38px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: inline-flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding-right: 1rem;
+  i {
+    font-size: 1.2rem;
+    cursor: pointer;
+  }
+}
+.input__search {
+  padding-right: 4.5rem;
+}
+.row__line {
+  background-color: #ebedef;
+  border: 2px solid #ebedef;
+}
+.row__table {
+  max-width: 6rem;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+.input__err {
+  border: 2px solid #bf4a4a;
+}
+.text__err {
+  font-size: 0.9rem;
+  color: #bf4a4a;
+}
+.logo-admin {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+
+  & img {
+    height: 24px;
+    padding-bottom: 2px;
+  }
+
+  & strong {
+    font-size: 1.6rem;
+  }
+}
+.card {
+  .card-body {
+    overflow: auto;
+  }
+}
+.select__status {
+  max-width: 120px;
+}
+.error__text {
+  font-size: 0.8rem !important;
+  margin: 0;
+  padding-left: 3rem;
+}
+.form-group {
+  label {
+    font-weight: 600 !important;
+  }
+}
+.card-header {
+  p {
+    font-weight: 600 !important;
+  }
+}
+.card-err {
+  border: 2px solid #bf4a4a;
+  margin: 0 1rem;
+}

@@ -1,0 +1,24 @@
+.list-products {
+  width: 80%;
+  padding: 3rem 0;
+  margin-top: $headerHeight;
+  @include sm-screen {
+      width: 100%;
+  }
+  .product__wrap {
+    grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+    @include sm-screen {
+    grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+
+    }
+    @include xs-screen {
+    grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+
+    }
+  }
+  .product__item__image {
+    @include md-screen {
+      height: 30rem;
+    }
+  }
+}

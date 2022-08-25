@@ -1,0 +1,22 @@
+.button {
+    width: 100%;
+    display: flex;
+    padding: 2rem 0;
+    cursor: pointer;
+    & span {
+      --height:1.6rem;
+      color: $light;
+      background-color: $primary;
+      display: inline-block;
+      margin: auto;
+      font-size: var(--height);
+      line-height: var(--height);
+      font-weight: 500;
+      padding: 1rem 2rem;
+      transition: .2s linear;
+      &:hover {
+        opacity: 0.9;
+        box-shadow: $shadow;
+      }
+    }
+  }

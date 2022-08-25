@@ -1,0 +1,110 @@
+.slide {
+  display: flex !important;
+  height: 90vh;
+  width: 100%;
+  padding: 0.5rem;
+  @include mb-screen {
+    height: 70vh;
+  }
+  @include sm-screen {
+    height: 91vh;
+  }
+
+  @include md-screen {
+  }
+  &_slogan {
+    flex: 0 0 50%;
+    margin-top: 20vh;
+    @include mb-screen {
+      margin-top: 10vh;
+    }
+    @include sm-screen {
+      flex: 0 0 50%;
+      margin-top: 10vh;
+    }
+    @include xs-screen {
+      display: none;
+    }
+    & h1 {
+        width: 150%;
+      font-size: 5rem;
+      color: $primary;
+    }
+    & p {
+      width: 90%;
+      margin-top: 10vh;
+      font-size: 1.6rem;
+      color: $text-color;
+      line-height: 2.5rem;
+      font-weight: 500;
+    }
+    & a {
+      display: inline-block;
+      margin-top: 5vh;
+      font-size: 2rem;
+      font-weight: 700;
+      padding: 1rem 2rem;
+      color: $light;
+      background-color: $primary;
+    }
+    & a:hover {
+      opacity: 0.8;
+    }
+  }
+  &_img {
+    flex: 0 0 50%;
+    position: relative;
+    @include mb-screen {
+      margin-top: 10vh;
+    }
+    @include sm-screen {
+      flex: 0 0 50%;
+    }
+    @include xs-screen {
+      flex: 0 0 100%;
+    }
+    &_wrap {
+      position: absolute;
+      z-index: 1001;
+      @include lg-screen {
+        top: -100px;
+        left: 25%;
+      }
+      @include md-screen {
+        width: 100%;
+      }
+      @include xs-screen {
+        margin-top: 0;
+      }
+      & img {
+          z-index: 1002;
+        display: inline-block;
+        position: relative;
+        width: 400px;
+        top: -20%;
+        @include lg-screen {
+          width: 500px;
+        }
+      }
+      & span {
+        display: block;
+        position: absolute;
+        transform: translate(10%, 40%);
+        top: 0;
+        z-index: 10;
+        background-color: $primary;
+        width: 350px;
+        height: 350px;
+        border-radius: 59% 41% 50% 50% / 45% 44% 56% 55%;
+        @include sm-screen {
+          transform: translate(0%, 40%);
+        }
+        @include xs-screen {
+          transform: translate(6%, 40%);
+          width: 300px;
+          height: 300px;
+        }
+      }
+    }
+  }
+}

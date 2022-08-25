@@ -1,0 +1,45 @@
+.footer {
+  padding-top: 5rem;
+  height: 300px;
+  display: grid;
+  width: 100%;
+  @include sm-screen {
+    gap: 1.5rem;
+  }
+  grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+  &_item {
+    &_title {
+      font-size: 2rem;
+      font-weight: 700;
+      color: $dark;
+    }
+    &_content {
+      margin-top: 3rem;
+      & p {
+        margin-top: 2rem;
+        font-size: 1.6rem;
+        font-weight: 500;
+        &:hover {
+          color: $primary;
+          cursor: pointer;
+        }
+        & span.active {
+          font-weight: 700;
+        }
+      }
+    }
+    &_logo {
+      padding-top: 1rem;
+      width: 12rem;
+      display: inline-block;
+    }
+  }
+  &_item:last-child {
+    & p {
+      font-size: 1.6rem;
+      margin-top: 2rem;
+      line-height: 2.5rem;
+      font-weight: 500;
+    }
+  }
+}

@@ -1,0 +1,21 @@
+@import "../../sass/_variables.scss";
+.history_container {
+  margin-top: 12rem;
+  font-size: 1.3rem !important;
+
+  .view {
+    cursor: pointer;
+    &:hover {
+      color: rgb(65, 103, 178);
+    }
+  }
+}
+
+.detail_container {
+  margin-top: 12rem;
+  font-size: 1.4rem !important;
+
+  .font-weight-bold {
+    font-weight: bold;
+  }
+}

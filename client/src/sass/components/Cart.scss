@@ -1,0 +1,108 @@
+.cart {
+  margin-top: $headerHeight;
+  padding: 3rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  @include sm-screen {
+  padding: 1rem;
+  }
+  &__checkout {
+    width: 30%;
+    @include sm-screen {
+      width: 20%;
+    }
+    @include xs-screen {
+      width: 100%;
+    }
+    &__title {
+      font-size: 1.5rem;
+      font-weight: 500;
+      width: 100%;
+      margin: 2rem 0;
+    }
+    &__total {
+      width: 100%;
+      @include flex(center, space-between);
+      & span {
+        &:first-child {
+          font-size: 1.5rem;
+          font-weight: 500;
+          width: 100%;
+          margin: 2rem 0;
+        }
+        &:last-child {
+          font-size: 2.2rem;
+          color: $primary;
+          font-weight: 700;
+        }
+      }
+    }
+    .button {
+      span {
+        text-align: center;
+        font-weight: 700;
+        width: 100%;
+        @include xs-screen {
+          width: 80%;
+        }
+      }
+    }
+  }
+  &__info {
+    flex: 1;
+    text-align: center;
+    &-item {
+      display: flex;
+      margin: 3rem 0;
+      &__img {
+        width: 10rem;
+        height: 15rem;
+        object-fit: cover;
+        & img {
+          width: 100%;
+        }
+      }
+      &__title,
+      &__price,
+      &__quantity {
+        margin: auto;
+      }
+      &__title,
+      &__price {
+        font-size: 1.8rem;
+        font-weight: 700;
+        width: 20%;
+      }
+      &__title {
+          width: 30%;
+      }
+      &__quantity {
+        list-style: none;
+        width: 30%;
+        & span {
+          line-height: 2rem;
+          border: 2px solid $text-color;
+          font-size: 1.4rem;
+          font-weight: 500;
+          padding: 0.3rem 1rem;
+          cursor: pointer;
+          color: $dark;
+          // user-select: none;
+          &:nth-child(2) {
+            border-left: none;
+            border-right: none;
+            padding: 0.3rem 2rem;
+            text-align: center;
+          }
+        }
+        &-delete {
+            margin-left: 3rem;
+            font-size: 2rem;
+            line-height: 2rem;
+            cursor: pointer;
+        }
+      }
+    }
+  }
+}
