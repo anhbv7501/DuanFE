@@ -25,7 +25,6 @@ function Routess() {
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register />} />
         <Route path="/forgot-pass" element={<ChangePassword />} />
-        <Route path="/change-pass/:token" element={<ForgotPassword />} />
         <Route path="/profile" element={<Profile />} />
         <Route path="/history" element={<History />} />
         <Route path="/detail-receipt/:id" element={<DetailOrder />} />

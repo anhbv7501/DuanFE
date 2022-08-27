@@ -1,5 +1,5 @@
 export const API = {
-  BASE_URL: "http://localhost:4000/api/v1",
+  BASE_URL: "http://localhost:8080/api/v1",
   BASE_URL_IMAGE: 'http://localhost:8080/',
   UPLOADFILE: "/upload",
   UPLOAD_MULTIPLEFILE: "/upload-multiple",

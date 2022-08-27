@@ -26,9 +26,6 @@ function Home(props) {
   const { getProduct } = useHome();
 
   useEffect(() => {
-    if (!isLogin) {
-      navigate("/login");
-    } else {
       getProduct({
         option: "POPULAR",
         successCallback: (response) => {
@@ -54,7 +51,7 @@ function Home(props) {
         },
       });
     }
-  }, []);
+ , []);
   const sellingDatas = data.getProducts(4);
   const newDatas = data.getProducts(8);
   const popularDatas = data.getProducts(12);

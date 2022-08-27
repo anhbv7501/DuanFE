@@ -11,6 +11,7 @@ import { API } from "../../constants/api.constants";
 import useProduct from "../../hooks/product.hook";
 import { toast } from "react-toastify";
 import { Box, FormControl, FormControlLabel, FormLabel, Radio, RadioGroup } from "@mui/material";
+import { getIsLogin } from "../../redux/reducers/auth.reducer";
 
 function Cart() {
   const { cartTotal, totalUniqueItems, items, updateItemQuantity, removeItem } = useCart();
@@ -20,6 +21,7 @@ function Cart() {
   const navigate = useNavigate();
   const [totalPrice, setTotalPrice] = useState("0");
   const [method, setMethod] = useState();
+  const isLogin = useAppSelector(getIsLogin);
 
   useEffect(() => {
     const price = carts.reduce((previousValue, currentValue) => previousValue + currentValue.price, 0);
@@ -60,6 +62,12 @@ function Cart() {
     if (!method) {
       toast.error("Vui lòng chọn hình thức thanh toán");
 
+    }
+    
+    else if(method == "vnPay"){
+      const products = carts.map((cart) => {
+        window.open(`http://localhost:16262/Default.aspx?OrderId=1234&Amount=${cart?.price}`,'_self ');
+     });
     } else {
       const products = carts.map((cart) => {
         return { quantity: cart?.quantity, productOptionId: cart?.productOptionId, price: cart?.priceInit };
@@ -67,7 +75,11 @@ function Cart() {
       if (products.length < 1) {
         toast.error("Không có sản phẩm nảo trong giỏ hàng");
 
+      }
+      else  if (!isLogin) {
+        navigate("/login");
       } else {
+        console.log(method);
         booking({
           products,
           method,
@@ -103,6 +115,7 @@ function Cart() {
                 >
                   <FormControlLabel value="direct" control={<Radio />} label="Thanh toán trực tiếp" />
                   <FormControlLabel value="banking" control={<Radio />} label="Chuyển khoản đại lý" />
+                  <FormControlLabel value="vnPay" control={<Radio />} label="VN PAY" />
                   <FormControlLabel value="other" control={<Radio />} label="Khác" />
                 </RadioGroup>
               </FormControl>

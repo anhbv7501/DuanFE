@@ -5,15 +5,15 @@ const AppFooter = () => {
   return (
     <CFooter>
       <div>
-        <a href="http://simstech.vn" target="_blank" rel="noopener noreferrer">
-          AnhTuanHoang
+        <a href="https://caodang.fpt.edu.vn/" target="_blank" rel="noopener noreferrer">
+          Nhóm 38-GreenStyle
         </a>
-        <span className="ms-1">&copy; 2021 creativeLabs.</span>
+        <span className="ms-1">&copy; 2022 </span>
       </div>
       <div className="ms-auto">
         <span className="me-1">Powered by</span>
-        <a href="http://simstech.vn" target="_blank" rel="noopener noreferrer">
-          AnhTuanHoang
+        <a href="https://caodang.fpt.edu.vn/" target="_blank" rel="noopener noreferrer">
+          Nhóm 38-GreenStyle
         </a>
       </div>
     </CFooter>

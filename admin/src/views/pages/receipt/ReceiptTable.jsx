@@ -80,7 +80,7 @@ export default function ReceiptTable({ data }) {
                         currency: 'VND',
                       }) || 0}
                     </CTableDataCell>
-                    <CTableDataCell>{formatDate(e?.created_at)}</CTableDataCell>
+                    <CTableDataCell>{formatDate(e?.create_at)}</CTableDataCell>
                     <CTableDataCell>
                       <CFormSelect
                         size="sm"

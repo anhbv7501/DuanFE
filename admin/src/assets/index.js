@@ -7,7 +7,7 @@ import * as slide_3 from './png/slider/slide_3.png'
 import * as logo from './png/logo/Logo.png'
 import * as logo_2 from './png/logo/Logo-2.png'
 import * as favicon from './png/logo/favicon.png'
-import * as logo_yolo from './png/logo/Logo-yolo.png'
+import * as logo_green from './png/logo/Logo-2.png'
 import * as placeholder from './png/logo/placeholder.png'
 
 // ProductImport
@@ -48,7 +48,7 @@ export const imgLogo = {
   logo: logo.default,
   logo_2: logo_2.default,
   favicon: favicon.default,
-  logo_yolo: logo_yolo.default,
+  logo_yolo: logo_green.default,
   placeholder: placeholder.default,
 }
 

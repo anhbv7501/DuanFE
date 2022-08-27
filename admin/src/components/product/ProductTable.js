@@ -85,7 +85,7 @@ export default function ProductTable(props) {
                         currency: 'VND',
                       }) || 0}
                     </CTableDataCell>
-                    <CTableDataCell>{formatDate(e?.created_at)}</CTableDataCell>
+                    <CTableDataCell>{formatDate(e?.create_at)}</CTableDataCell>
                     <CTableDataCell>
                       <CIcon
                         icon={cilPencil}
